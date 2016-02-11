@@ -26,7 +26,7 @@ function addProjectDetails(e) {
 	// get rid of 'project' from the front of the id 'project3'
 	var idNumber = projectID.substr('project'.length);
 
-	var projectDataURL = "http://localhost:3000/project/" + idNumber;
+	var projectDataURL = "project/" + idNumber;
 	$.get(projectDataURL, callBackFn);
 
 	console.log("User clicked on project " + idNumber);
@@ -40,7 +40,7 @@ function randomizeColors(e) {
 	e.preventDefault();
 	console.log("User clicked on color button");
 
-	$.get("http://localhost:3000/palette", function(data) {
+	$.get("palette", function(data) {
 		var colors = data.colors.hex;
 		$('body').css('background-color', colors[0]);
 		$('.thumbnail').css('background-color', colors[1]);
