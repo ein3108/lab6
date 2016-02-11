@@ -71,7 +71,7 @@ then
   if [ "$mongo_missing" == "1" ]
   then
     echo "Installing MongoDB..."
-    mongo_res=$(/home/vagrant/introHCI/mongo.sh)
+    mongo_res=$(//vagrant/introHCI/mongo.sh)
 
     mongo_loc=$(which mongo)
     if [ "${#mongo_loc}" == "0" ]
@@ -89,7 +89,7 @@ then
   if [ "$heroku_missing" == "1" ]
   then
     heroku_res=$(echo "Installing Heroku Toolbelt...";
-    /home/vagrant/introHCI/heroku.sh)
+    //vagrant/introHCI/heroku.sh)
     heroku_loc=$(which heroku)
     if [ "${#heroku_loc}" == "0" ]
     then
